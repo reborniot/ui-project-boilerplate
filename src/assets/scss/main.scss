@@ -1,0 +1,36 @@
+@import "variables";
+@import "files/main";
+
+:root { 
+  font-size: 16px; 
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum";  
+  font-family: 'Lato';
+}  
+
+.hide {
+  display: none !important;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-family: 'Lato';
+  scroll-behavior: smooth; 
+}
+
+header {
+  padding: .1rem .5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+// Responsive Content
+@import "responsive"; 

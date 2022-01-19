@@ -1,0 +1,62 @@
+@import "normalize";
+@import "fonts";
+
+* {
+	box-sizing: border-box;
+	text-rendering: optimizeLegibility;
+	// -webkit-font-smoothing: antialiased;
+	// -moz-osx-font-smoothing: grayscale;
+	-moz-font-feature-settings: "liga","kern";
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	opacity: .3;
+}
+::-moz-placeholder { /* Firefox 19+ */
+	opacity: .3;
+}
+:-ms-input-placeholder { /* IE 10+ */
+	opacity: .3;
+}
+:-moz-placeholder { /* Firefox 18- */
+	opacity: .3;
+}
+
+button {
+	cursor: pointer;
+	&:focus,
+	&:active {
+		outline: none;
+	}
+}
+
+.container {
+	width: 94%;
+	max-width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding: 0 1%;
+}
+
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+html {font: 110%/1.4 system-ui}
+
+@mixin centerContent() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@function r($size) {
+	$remSize: $size / 16px;
+	@return #{$remSize}rem;
+}
